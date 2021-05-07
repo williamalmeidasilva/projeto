@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="id<1" colors="primary">Cadastrar Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="nome"placeholder="Digite seu Nome"></ion-input>
+    </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="Email" placeholder="Digite seu Email"></ion-input>
+      </ion-item>
+        
+        <ion-item lines="none">
+          <ion-label position="stacked">CPF</ion-label>
+          <ion-input type="number" [(ngModel)]="CPF"placeholder="Digite sua CPF"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Telefone</ion-label>
+          <ion-input type="number" [(ngModel)]="Telefone"placeholder="Digite seu Telefone"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="senha" placeholder="Digite sua Senha"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked">Confirmar Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="senha"placeholder="Digite sua Senha"></ion-input>
+        </ion-item>
+
+          <ion-item lines="none">
+          <ion-button color="success" expand="block" (click)="confirmar()" >Confirmar</ion-button>
+          <ion-button color="danger" expand="block">Cancelar</ion-button>
+          </ion-item>
+        </ion-list>
+</ion-content>
